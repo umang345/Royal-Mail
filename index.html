@@ -21,5 +21,15 @@
 
     <textarea id="street-address" name = "street-address" style="margin-top: 20px;" ></textarea>
 
+    <script type="text/javascript">
+        addressNow.listen('load', function(control) {
+            control.listen("populate", function (address) {
+                console.log("Address : ");
+                console.log(address);
+                // document.getElementById("line1").value = address.Line1;
+            });
+        });
+    </script>
+
 </body>
 </html>
